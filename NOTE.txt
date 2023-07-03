@@ -1,0 +1,5 @@
+Gradle : querydsl > Tasks > other > complieQuerydsl 실행 (app 빌드 시에도 자동으로 생성됨)
+=> Querydsl이 엔티티를 보고 build/generated/querydsl (build.gradle에 정의한 경로) 밑에 Q엔티티 클래스를 생성함
+** Git 배포 시 build 밑에 Q클래스가 있는 이유 -> 배포되지 않게 끔..
+** build 밑에 포함되지 않고 src 아래 경로로 떨어뜨리면 gitignore에서 설정해주자.
+(Q파일은 컴파일 시 querydsl 라이브러리가 엔티티를 보고 자동으로 생성해주는 것이므로 여러 개발자들이 모두 Q파일 git에 올려 관리하면 충돌 발생할 수 있음)
